@@ -1,0 +1,350 @@
+###########################
+# greece events 
+###########################
+
+add_namespace = greece
+
+country_event = { #History
+	id = greece.1
+	title = greece.1.t
+	desc = greece.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	tag = GRE
+	}
+	option = {
+		name = greece.1.a
+	}
+}
+
+country_event = { #Greek independence day
+	id = greece.2
+	title = greece.2.t
+	desc = greece.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = greece.2.a
+	}
+}
+country_event = { #Greek Upcoming election
+	id = greece.3
+	title = greece.3.t
+	desc = greece.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = greece.3.a
+		add_stability =-.1
+		country_event { id = greece.4 months = 2 days = 1 }
+	}
+}
+country_event = { #election 1st stage 
+	id = greece.4
+	title = greece.4.t
+	desc = greece.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #radleft
+		name = greece.4.a
+		remove_ideas_with_trait = hog`
+		add_ideas = m
+		remove_ideas_with_trait = frnmin
+		add_ideas = m
+		remove_ideas_with_trait = ecomin
+		add_ideas = m
+		remove_ideas_with_trait = secmin
+		add_ideas = m
+		country_event = { id = greece.5 days = 7 }
+	}
+	option = { #lib left 
+		name = greece.4.b
+		remove_ideas_with_trait = hog
+		add_ideas = v
+		remove_ideas_with_trait = frnmin
+		add_ideas = m
+		remove_ideas_with_trait = ecomin
+		add_ideas = m
+		remove_ideas_with_trait = secmin
+		add_ideas = m
+		country_event = { id = greece.6 days = 7 }
+	}
+	option = { #lib right
+		name = greece.4.c
+		remove_ideas_with_trait = hog
+		add_ideas = m
+		remove_ideas_with_trait = frnmin
+		add_ideas = m
+		remove_ideas_with_trait = ecomin
+		add_ideas = m
+		remove_ideas_with_trait = secmin
+		add_ideas = m
+		country_event = { id = greece.7 days = 7 }
+	}
+	option = { #radright 
+		name = greece.4.d
+		remove_ideas_with_trait = hog
+		add_ideas = m
+		remove_ideas_with_trait = frnmin
+		add_ideas = m
+		remove_ideas_with_trait = ecomin
+		add_ideas = m
+		remove_ideas_with_trait = secmin
+		add_ideas = m
+		set_country_flag = GRE.fash
+		country_event = { id = greece.8 days = 7 }
+	}
+}
+	country_event = { #election 2nd stage radleft
+	id = greece.5
+	title = greece.5.t
+	desc = greece.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = greece.5.a #libsoc
+		set_politics = {
+			ruling_party = libertarian_socialist
+		}
+		add_popularity = {ideology = libertarian_socialist popularity = 0.1}
+		set_country_flag = CUB_MOD
+		country_event = {
+			#
+		}
+	}
+	option = { 
+		name = greece.5.b #colectivist 
+		set_politics = {
+			ruling_party = egalitarian_collectivist
+		}
+		add_popularity = {ideology = egalitarian_collectivist popularity = 0.1}
+		set_country_flag = CUB_SOC
+		country_event = {
+            #
+		}
+	}
+	option = {
+		name = greece.5.c #communard 
+		
+		set_politics = {
+			ruling_party = cornelian_communard
+		}
+		add_popularity = {ideology = cornelian_communard popularity = 0.1}
+	
+		set_country_flag = CUB_CON
+		hidden_effect = {
+			country_event = {
+				#
+				}
+			}
+		}
+	}
+}
+country_event = { #election 2nd stage libleft
+	id = greece.6
+	title = greece.6.t
+	desc = greece.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = greece.6.a #classical liberal
+		set_politics = {
+			ruling_party = classical_liberal
+		}
+		add_popularity = {ideology = classical_liberal popularity = 0.1}
+		country_event = {
+			#
+		}
+	}
+	option = { 
+		name = greece.6.b # social_democrat
+		set_politics = {
+			ruling_party = social_democrat
+		}
+		add_popularity = {ideology = social_democrat popularity = 0.1}
+		country_event = {
+            #
+		}
+	}
+}
+country_event = { #election 2nd stage 
+	id = greece.7
+	title = greece.7.t
+	desc = greece.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = greece.7.a #social_conservative
+		set_politics = {
+			ruling_party = social_conservative
+		}
+		add_popularity = {ideology = social_conservative popularity = 0.1}
+		country_event = {
+			#
+		}
+	}
+	option = { 
+		name = greece.7.b #authoritarian_democrat
+		set_politics = {
+			ruling_party = authoritarian_democrat
+		}
+		add_popularity = {ideology = authoritarian_democrat popularity = 0.1}
+		country_event = {
+            #
+		}
+	}
+		}
+		country_event = { #election 2nd stage radright
+	id = greece.8
+	title = greece.8.t
+	desc = greece.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = greece.8.a #national_autocracy
+		set_politics = {
+			ruling_party = national_autocracy
+		}
+		add_popularity = {ideology = national_autocracy popularity = 0.1}
+		country_event = {
+			id = greece.9 days = 1 
+		}
+	}
+	option = { 
+		name = greece.8.b #paternal_autocrat
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		add_popularity = {ideology = paternal_autocrat popularity = 0.1}
+		country_event = {
+            id = greece.9 days = 1 
+		}
+	}
+}
+# fash events 
+country_event = { #commards and left-liberals contest election results
+	id = greece.9
+	title = greece.9.t
+	desc = greece.9.d
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { 
+		name = greece.9.a
+			add_popularity = {ideology = cornelian_communard popularity = 0.1}
+			add_political_power = -100
+		}
+	
+	option = { 
+		name = greece.9.b
+			add_stability = -.1
+			add_political_power = -50
+		}
+}
+
+country_event = { #consolidate power 
+	id = greece.10
+	title = greece.10.t
+	desc = greece.10.d
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	
+	option = { #unite postions 
+		name = greece.10.a
+			remove_ideas_with_trait = hog
+			add_ideas = .
+			add_political_power = -100
+			set_country_flag = GRE.merge
+			country_event = { id = greece.12 days = 7 }
+		}
+	option = { #dont change
+		name = greece.10.b
+			set_country_flag = GRE.separate 
+			
+		}
+}
+
+country_event = { #left unites 
+	id = greece.11
+	title = greece.11.t
+	desc = greece.11.d
+	fire_only_once = yes
+	is_triggered_only = yes 	
+	
+	option = { #left unite postions 
+		name = greece.11.a
+		remove_ideas_with_trait = hog
+		add_ideas = .
+		add_political_power = -100
+		add_popularity = {ideology = cornelian_communard popularity = 0.2}
+		add_popularity = {ideology = egalitarian_collectivist popularity = -0.1}
+		add_popularity = {ideology = libertarian_socialist popularity = -0.1}
+		set_country_flag = GRE.leftunites
+		}
+	
+country_event = { #major leftist rallies 
+	id = greece.12
+	title = greece.12.t
+	desc = greece.12.d
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { #Jail major leftist
+		name = greece.12.a
+		add_political_power = -100
+		stability = .1
+		hidden_effect = {
+			random_list = {
+				20 = {
+					country_event = { id = greece.13 }
+				}
+				80 = {
+					country_event = { id = greece.14 }
+				}
+			}
+		}
+	}
+	option = { #let the scream 
+		name = greece.12.b
+		add_political_power = 50
+		stability = -.1
+		hidden_effect = {
+			random_list = {
+				80 = {
+					country_event = { id = greece.13 }
+				}
+				20 = {
+					country_event = { id = greece.14 }
+				}
+			}
+		}
+	}
+}
+country_event = { #Leftist rally escalates  
+	id = greece.13
+	title = greece.13.t
+	desc = greece.13.d
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # step down
+		name = greece.13.a
+		set_politics = {
+			ruling_party = social_conservative
+		}
+	option = { # Molon labe
+		name = greece.13.b
+		hidden_effect = {
+			country_event = { id = greece.15 days = 7 }
+		}
+	}
+}
+		

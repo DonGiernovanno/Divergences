@@ -1,0 +1,21 @@
+name = "Konstantinos Alexopoulos "
+	picture = "gfx//leaders//Portrait_GRE_Georgios_Papandreou.tga" ""
+	expire = "1965.1.1"
+	ideology = cornelian_communard_subtype
+	traits = {
+		#
+	}
+	name = "Ajax Balli"
+	picture = "gfx//leaders//Portrait_GRE_Georgios_Papandreou.tga" ""
+	expire = "1965.1.1"
+	ideology = national_autocracy_subtype
+	traits = {
+		#
+	}
+	name = "Basil Doukas"
+	picture = "gfx//leaders//Portrait_GRE_Georgios_Papandreou.tga" ""
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {
+		#
+	}

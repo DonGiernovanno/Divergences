@@ -1,0 +1,26 @@
+ideas = {
+	head_of_gov = {
+		Nikos_Anninos = {
+			allowed = {
+			original_tag = CUB
+			}
+			available = {
+				always = no
+			}
+			cancel_if_invalid = no
+			removal_cost = -1
+			ai_will_do = {
+				factor = 1
+			}
+			traits = {
+				gentleman_politician
+				market_lib_minister
+				hog
+			}
+		}
+	}
+	foreign_minister = {
+	
+	}
+	economy_minister = {
+}

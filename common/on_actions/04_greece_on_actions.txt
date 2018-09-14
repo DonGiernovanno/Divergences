@@ -1,0 +1,9 @@
+on_actions = {
+on_startup = {
+        effect = {
+		   GRE = { country_event = { id = greece.1 days = 1 } }
+		   GRE = { country_event = { id = greece.2 months = 1 days = 2 }} 
+		   GRE = { country_event = { id = greece.3 months = 3 days = 1 }} 
+        }
+	}
+}
